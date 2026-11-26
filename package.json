@@ -2,28 +2,30 @@
   "name": "estoque-api",
   "version": "1.0.0",
   "description": "Projeto simples de controle de estoque",
-  "homepage": "https://github.com/heitorhjcostaK1LL/estoque-api#readme",
+  "homepage": "https://github.com/welligtonjunior-dev/estoque-api#readme",
   "bugs": {
-    "url": "https://github.com/heitorhjcostaK1LL/estoque-api/issues"
+    "url": "https://github.com/welligtonjunior-dev/estoque-api/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heitorhjcostaK1LL/estoque-api.git"
+    "url": "git+https://github.com/welligtonjunior-dev/estoque-api.git"
   },
   "license": "ISC",
-  "author": "gabrielbragarnb@gmail.com",
+  "author": "welligtonjunior12345@gmail.com",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
     "dev": "nodemon server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "dotenv": "^18.0.10",
-    "express": "^5.3.0"
+    "express": "^5.3.0",
+    "knex": "^3.3.0",
+    "mysql2": "^3.24.6"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.11"
   }
 }
