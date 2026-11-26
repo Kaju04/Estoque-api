@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 dotenv.config ();
+import db from './src/database/database.js'
 
 import {loggerMiddleware} from './src/middleware/index.js'
 import express, { json, urlencoded } from 'express';
@@ -52,6 +53,24 @@ app.delete('/produtos/:id', (req,res) => {
         "status": "deletado",
         "codigo": 200,
         "mensagem":`o produto ${id} foi removido`
+    })
+})
+
+
+app.get('/usuarios', (req,res) => {
+    db('usuarios').select('*')
+        res.status(200).json({
+        "status": "ok",
+        "codigo": 200,
+        "mensagem": usuasrios
+    })
+})
+
+.catch((error)=>{
+    res.status(500).json({
+        "status": "erro",
+        "codigo": 500,
+        "mensagem": "erro ao buscar usuarios"
     })
 })
 
